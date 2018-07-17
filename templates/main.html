@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="static/material.min.css" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
-<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}"> 
 <script src="static/script/material.min.js"></script>
 
 
@@ -32,10 +32,44 @@
     </nav>
   </div>
   <main class="mdl-layout__content">
-    <div class="page-content"><!-- Your content goes here --></div>
-          
-      <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-        Button
-      </button>
+    <div class="page-content"><!-- Your content goes here --></div>   
+      <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--4-col"> </div>
+        <div class="mdl-cell mdl-cell--4-col">
+          <!-- Wide card with share menu button -->
+          <style>
+              .demo-card-wide.mdl-card {
+                width: 512px;
+              }
+              .demo-card-wide > .mdl-card__title {
+                color: #fff;
+                height: 176px;
+                background: url('static/logo/logo.png') center / cover;
+              }
+              .demo-card-wide > .mdl-card__menu {
+                color: #fff;
+              }
+              </style>
+              
+              <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+                <div class="mdl-card__title">
+                  <h2 class="mdl-card__title-text">Pi On Pi Off</h2>
+                </div>
+                <div class="mdl-card__supporting-text">
+                  <center>
+                      Press the button below to switch on your computer
+                  </center>
+                </div>
+                <div class="mdl-card__actions mdl-card--border">
+                  <center>
+                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                      Power
+                    </a>
+                </center>
+                </div>
+              </div>
+        </div>
+        <div class="mdl-cell mdl-cell--4-col"></div>
+      </div>
   </main>
 </div>
