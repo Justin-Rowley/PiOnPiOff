@@ -1,75 +1,83 @@
-<link rel="stylesheet" href="static/material.min.css" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
-<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}"> 
-<script src="static/script/material.min.js"></script>
+<html>
+<head>
+  <link rel="stylesheet" href="static/material.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}"> 
+  <script src="static/script/material.min.js"></script>
+  <title>Pi On Pi Off</title>
+</head>
 
+<body style="background-color: #f3f3f3">
 
-<style>
-  i{
-      padding-top:10px;
-  }
-</style>
-<!-- Always shows a header, even in smaller screens. -->
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-  <header class="mdl-layout__header">
-    <div class="mdl-layout__header-row">
-      <!-- Title -->
+  <style>
+    i{
+        padding-top:10px;
+    }
+  </style>
+  <!-- Always shows a header, even in smaller screens. -->
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+      <div class="mdl-layout__header-row">
+        <!-- Title -->
+        <span class="mdl-layout-title">Pi On Pi Off</span>
+        <!-- Add spacer, to align navigation to the right -->
+        <div class="mdl-layout-spacer"></div>
+        <!-- Navigation. We hide it in small screens. -->
+        <nav class="mdl-navigation mdl-layout--large-screen-only">
+          <a class="mdl-navigation__link" href="">Main</a>
+          <a class="mdl-navigation__link" href="">Settings</a>
+        </nav>
+      </div>
+    </header>
+    <div class="mdl-layout__drawer">
       <span class="mdl-layout-title">Pi On Pi Off</span>
-      <!-- Add spacer, to align navigation to the right -->
-      <div class="mdl-layout-spacer"></div>
-      <!-- Navigation. We hide it in small screens. -->
-      <nav class="mdl-navigation mdl-layout--large-screen-only">
+      <nav class="mdl-navigation">
         <a class="mdl-navigation__link" href="">Main</a>
         <a class="mdl-navigation__link" href="">Settings</a>
       </nav>
     </div>
-  </header>
-  <div class="mdl-layout__drawer">
-    <span class="mdl-layout-title">Pi On Pi Off</span>
-    <nav class="mdl-navigation">
-      <a class="mdl-navigation__link" href="">Main</a>
-      <a class="mdl-navigation__link" href="">Settings</a>
-    </nav>
-  </div>
-  <main class="mdl-layout__content">
-    <div class="page-content"><!-- Your content goes here --></div>   
-      <div class="mdl-grid">
-        <div class="content-column mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-cell--bottom mdl-cell--hide-phone"> </div>
-        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
-          <!-- Wide card with share menu button -->
-          <style>
-              .demo-card-wide.mdl-card {
-                width: 512px;
-              }
-              .demo-card-wide > .mdl-card__title {
-                color: #fff;
-                height: 176px;
-                background: url('static/logo/logo.png') center / cover;
-              }
-              .demo-card-wide > .mdl-card__menu {
-                color: #fff;
-              }
-              </style>
-              
-              <div class="demo-card-wide mdl-card mdl-shadow--2dp">
-                <div class="mdl-card__title">
-                  <h2 class="mdl-card__title-text">Pi On Pi Off</h2>
-                </div>
-                <div class="mdl-card__supporting-text">
-                  <center>
-                      Press the button below to switch on your computer
+    <main class="mdl-layout__content">
+      <div class="page-content"><!-- Your content goes here --></div>   
+        <div class="mdl-grid">
+          <div class="content-column mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-cell--bottom mdl-cell--hide-phone"> </div>
+          <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+            <!-- Wide card with share menu button -->
+            <style>
+                .demo-card-wide.mdl-card {
+                  width: 512px;
+                }
+                .demo-card-wide > .mdl-card__title {
+                  color: #fff;
+                  height: 176px;
+                  background: url('static/logo/logooff.png') center / cover;
+                }
+                .demo-card-wide > .mdl-card__menu {
+                  color: #fff;
+                }
+                </style>
+                
+                <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+                  <div class="mdl-card__title">
+                    <h2 class="mdl-card__title-text">Pi On Pi Off</h2>
+                  </div>
+                  <div class="mdl-card__supporting-text">
+                    <center>
+                        Press the button below to switch on your computer
+                    </center>
+                  </div>
+                  <div class="mdl-card__actions mdl-card--border">
+                    <center>
+                      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                        Power
+                      </a>
                   </center>
+                  </div>
                 </div>
-                <div class="mdl-card__actions mdl-card--border">
-                  <center>
-                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                      Power
-                    </a>
-                </center>
-                </div>
-              </div>
+          </div>
+          <div class="content-column mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-cell--bottom mdl-cell--hide-phone"></div>
         </div>
-        <div class="content-column mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-cell--bottom mdl-cell--hide-phone"></div>
-      </div>
-  </main>
-</div>
+    </main>
+  </div>
+</body>
+
+</html>
