@@ -7,11 +7,11 @@ def main():
     PC = ""
     PC = detect()
     if PC == "on":
-        render_template(on.html)
+        return render_template("on.html")
     elif PC == "off":
-        render_template(off.html)
+        return render_template("off.html")
     elif PC == "WTF":
-        render_template(main.html)
+        return render_template("main.html")
 
 if __name__ == '__main__':
       app.run(host='0.0.0.0', port=80, debug = True,)
