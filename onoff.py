@@ -6,12 +6,13 @@ SwitchPin = 2
 #change these variables to adjust which GPIO pin will be the the PowerLED pin for detecting if the PC is on or not
 PowerLEDPin = 3  
 
-
+'''
 def setup():
     GPIO.setmode(GPIO.BCM)
     GPIO.setwarnings(False)
     GPIO.setup(SwitchPin, GPIO.OUT, initial=GPIO.LOW)
     GPIO.setup(PowerLEDPin, GPIO.IN)
+'''
 
 def on():
     '''
