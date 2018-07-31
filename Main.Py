@@ -1,5 +1,6 @@
 from flask import Flask, redirect, render_template, request
 from onoff import detect, on, off
+import jsonify
 app = Flask(__name__)
 
 @app.route('/')
@@ -7,10 +8,13 @@ def main():
     PC = ""
     PC = detect()
     if request.method == 'POST':
-        if 'Power Off' in request.form:
+        button = request.arg.get("Power")
+        if button == 0:
             off()
-        elif 'Power On' in request.form:
+            return jsonify(status="success")
+        elif button == 1:
             on()
+            return jsonify(status="success")
     if PC == "on":
         return render_template("on.html")
     elif PC == "off":

@@ -68,7 +68,7 @@
                   </div>
                   <div class="mdl-card__actions mdl-card--border">
                     <center>
-                      <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" style="width: 465px; height: 40px; min-width: initial;">
+                      <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect poweroff" style="width: 465px; height: 40px; min-width: initial;">
                         Power Off!
                       </button>
                   </center>
@@ -79,6 +79,8 @@
         </div>
     </main>
   </div>
+  <script type=text/javascript src="{{
+    url_for('static', filename='script/jquery.js') }}"></script>
+  <script src="/static/script/poweroff.js"></script>
 </body>
-
 </html>
