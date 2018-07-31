@@ -1,4 +1,4 @@
-from flask import Flask, redirect, render_template
+from flask import Flask, redirect, render_template, request
 from onoff import detect, on, off
 app = Flask(__name__)
 
@@ -6,6 +6,11 @@ app = Flask(__name__)
 def main():
     PC = ""
     PC = detect()
+    if request.method == 'POST':
+        if 'Power Off' in request.form:
+            off()
+        elif 'Power On' in request.form:
+            on()
     if PC == "on":
         return render_template("on.html")
     elif PC == "off":

@@ -4,6 +4,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
   <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}"> 
   <script src="static/script/material.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Pi On Pi Off</title>
 </head>
 
@@ -39,8 +40,8 @@
     <main class="mdl-layout__content">
       <div class="page-content"><!-- Your content goes here --></div>   
         <div class="mdl-grid">
-          <div class="content-column mdl-cell mdl-cell--4-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
-          <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+          <div class="content-column mdl-cell mdl-cell--3-col mdl-cell--3-col-tablet mdl-cell--hide-phone"></div>
+          <div class="mdl-cell mdl-cell--6-col mdl-cell--middle mdl-cell--6-col-tablet mdl-cell--3-col-phone">
             <!-- Wide card with share menu button -->
             <style>
                 .demo-card-wide.mdl-card {
@@ -67,14 +68,14 @@
                   </div>
                   <div class="mdl-card__actions mdl-card--border">
                     <center>
-                      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                      <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" style="width: 465px; height: 40px; min-width: initial;">
                         Power Off!
-                      </a>
+                      </button>
                   </center>
                   </div>
                 </div>
           </div>
-          <div class="content-column mdl-cell mdl-cell--4-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+          <div class="content-column mdl-cell mdl-cell--3-col mdl-cell--3-col-tablet mdl-cell--hide-phone"></div>
         </div>
     </main>
   </div>
