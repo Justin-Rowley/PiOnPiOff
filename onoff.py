@@ -1,4 +1,4 @@
-import RPi.GPIO as GPIO, 
+import RPi.GPIO as GPIO
 import time
 
 #change these variables to adjust which GPIO pin will be the SwitchPin for switching the PC on or off
