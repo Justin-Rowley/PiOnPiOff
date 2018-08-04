@@ -9,17 +9,16 @@ PowerLEDPin = 3
 def setup():
     GPIO.setmode(GPIO.BCM)
     GPIO.setwarnings(False)
-    GPIO.setup(SwitchPin, GPIO.OUT, initial=GPIO.LOW)
+    GPIO.setup(SwitchPin, GPIO.OUT)
     GPIO.setup(PowerLEDPin, GPIO.IN)
 
 
 def on():
-    
     setup()
     time.sleep(0.5)
     GPIO.output(SwitchPin, GPIO.HIGH)
     time.sleep(0.5)
-    GPIO.ouput(SwitchPin, GPIO.LOW)
+    GPIO.output(SwitchPin, GPIO.LOW)
     GPIO.cleanup()
     return "on"
 
