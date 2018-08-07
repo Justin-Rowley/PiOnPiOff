@@ -6,6 +6,20 @@
   <script src="static/script/material.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Pi On Pi Off</title>
+  
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type=text/javascript>
+    $(function() {
+      $('a#process_input').bind('click', function() {
+      $.getJSON('/background_process', {
+        power: "off"
+      });
+      return false;
+      });
+    });
+  </script>
+</head>
+
 </head>
 
 <body style="background-color: #f3f3f3">
@@ -40,7 +54,7 @@
     <main class="mdl-layout__content">
       <div class="page-content"><!-- Your content goes here --></div>   
         <div class="mdl-grid">
-          <div class="content-column mdl-cell mdl-cell--3-col mdl-cell--3-col-tablet mdl-cell--hide-phone"></div>
+          <div class="content-column mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet mdl-cell--hide-phone"></div>
           <div class="mdl-cell mdl-cell--6-col mdl-cell--middle mdl-cell--6-col-tablet mdl-cell--3-col-phone">
             <!-- Wide card with share menu button -->
             <style>
@@ -68,9 +82,9 @@
                   </div>
                   <div class="mdl-card__actions mdl-card--border">
                     <center>
-                      <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect poweroff" style="width: 465px; height: 40px; min-width: initial;">
+                      <a href=# id=process_input class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" style="width: 465px; height: 40px; min-width: initial;">
                         Power Off!
-                      </button>
+                      </a>
                   </center>
                   </div>
                 </div>
@@ -79,8 +93,5 @@
         </div>
     </main>
   </div>
-  <script type=text/javascript src="{{
-    url_for('static', filename='script/jquery.js') }}"></script>
-  <script src="/static/script/poweroff.js"></script>
 </body>
 </html>

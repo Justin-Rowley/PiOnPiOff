@@ -5,6 +5,17 @@
   <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}"> 
   <script src="static/script/material.min.js"></script>
   <title>Pi On Pi Off</title>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type=text/javascript>
+    $(function() {
+      $('a#process_input').bind('click', function() {
+      $.getJSON('/background_process', {
+        power: "off"
+      });
+      return false;
+      });
+    });
+  </script>
 </head>
 
 <body style="background-color: #f3f3f3">
@@ -67,7 +78,7 @@
                   </div>
                   <div class="mdl-card__actions mdl-card--border">
                     <center>
-                      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                      <a href=# id=process_input class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
                         Power On!
                       </a>
                   </center>
