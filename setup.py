@@ -2,7 +2,7 @@ import check_depends, os, subprocess, socket
 
 cwd = os.getcwd()
 f=open("/etc/systemd/system/pionpioff.service","w+")
-f.write("[Unit] \nDescription=Pi On Pi Off Webserver\nAfter=network.target\n\n[Service]\nType=simple\nUser=pi\nWorkingDirectory=%d\nExecStart=python3 %d\Main.Py \nRestart=on-failure # or always, on-abort, etc\n[Install]\nWantedBy=multi-user.target" %(cwd, cwd))
+f.write("[Unit] \nDescription=Pi On Pi Off Webserver\nAfter=network.target\n\n[Service]\nType=simple\nUser=pi\nWorkingDirectory=%s\nExecStart=python3 %s\Main.Py \nRestart=on-failure # or always, on-abort, etc\n[Install]\nWantedBy=multi-user.target" %(cwd, cwd))
 
 f.close()
 command = "sudo systemctl daemon-reload"
