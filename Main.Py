@@ -27,9 +27,7 @@ def background_process():
             return jsonify(result='Switching On The Computer')
     else:
         off()
-        status = checkoff()
-        if status == 'Fine':
-            return jsonify(result='Switching Off The Computer')
+        return jsonify(result='Switching Off The Computer')
 
 
 
