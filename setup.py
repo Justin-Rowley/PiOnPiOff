@@ -8,8 +8,11 @@ f.close()
 command = "sudo systemctl daemon-reload"
 subprocess.Popen(command, shell=True, executable='/bin/bash').wait()
 
-command2 = "systemctl start pionpioff.service"
+command2 = "sudo systemctl enable pionpioff"
 subprocess.Popen(command2, shell=True, executable='/bin/bash').wait()
+
+command3 = "sudo systemctl start pionpioff.service"
+subprocess.Popen(command3, shell=True, executable='/bin/bash').wait()
 
 s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 s.connect(("8.8.8.8", 80))
