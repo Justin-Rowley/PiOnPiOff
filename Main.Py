@@ -1,5 +1,5 @@
 from flask import Flask, redirect, render_template, request, jsonify
-from onoff import detect, on, off, checkoff
+from onoff import detect, on, off
 app = Flask(__name__)
 
 @app.route('/')
