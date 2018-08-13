@@ -1,10 +1,10 @@
-#import RPi.GPIO as GPIO
+import RPi.GPIO as GPIO
 import time
 
 #change these variables to adjust which GPIO pin will be the SwitchPin for switching the PC on or off
-SwitchPin = 2
+SwitchPin = 17
 #change these variables to adjust which GPIO pin will be the the PowerLED pin for detecting if the PC is on or not
-PowerLEDPin = 3  
+PowerLEDPin = 27  
 
 def setup():
     GPIO.setmode(GPIO.BCM)
@@ -14,49 +14,33 @@ def setup():
 
 
 def on():
-    '''
     setup()
     time.sleep(0.5)
     GPIO.output(SwitchPin, GPIO.HIGH)
     time.sleep(0.5)
     GPIO.output(SwitchPin, GPIO.LOW)
     GPIO.cleanup()
-    '''
     return "on"
 
 def off():
-    '''
     setup()
     time.sleep(0.5)
     GPIO.output(SwitchPin, GPIO.HIGH)
-    time.sleep(5)
+    time.sleep(2)
     GPIO.output(SwitchPin, GPIO.LOW)
     GPIO.cleanup()
-    '''
     return "off"
 
 def detect():
-    #setup()
-    #test = GPIO.read(PowerLEDPin)
-    
-    test = True
+    setup()
+    test = GPIO.input(PowerLEDPin)
     if test == True:
         PC = "on"
     elif test == False:
         PC = "off"
     else:
         PC = "WTF"
-    return PC
-
-def checkoff():
-    command = 'off'
-    time.sleep(600)
-    PC = detect()
-    if command != PC:
-        off()    
-    else:
-        return "Fine!"
-    
+    return PC   
 
 
 

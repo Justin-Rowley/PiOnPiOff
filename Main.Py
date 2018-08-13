@@ -1,5 +1,5 @@
 from flask import Flask, redirect, render_template, request, jsonify
-from onoff import detect, on, off, checkoff
+from onoff import detect, on, off
 app = Flask(__name__)
 
 @app.route('/')
@@ -27,9 +27,7 @@ def background_process():
             return jsonify(result='Switching On The Computer')
     else:
         off()
-        status = checkoff()
-        if status == 'Fine':
-            return jsonify(result='Switching Off The Computer')
+        return jsonify(result='Switching Off The Computer')
 
 
 
