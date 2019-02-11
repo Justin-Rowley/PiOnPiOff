@@ -18,20 +18,19 @@ def main():
 
 @app.route('/background_process')
 def background_process():
-    power = request.args.get('power')
-    if str(power) == 'on':
-        Command = on()
-        PC = detect()
-        if Command == PC:
-            return "done!"
+    if request.method == "POST":
+        power = request.args.get('power')
+        if str(power) == 'on':
+            Command = on()
+            PC = detect()
+            if Command == PC:
+                return "done!"
+            else:
+                on()
+                return "done!"
         else:
-            on()
+            off()
             return "done!"
-    else:
-        off()
-        return "done!"
-
-
 
 if __name__ == '__main__':
       app.run(host='0.0.0.0', port=8080, debug = True,)
