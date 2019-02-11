@@ -14,7 +14,7 @@ def main():
     elif PC == "WTF":
         return render_template("main.html")
         '''
-    return render_template("settings.html")
+    return render_template("on.html")
 
 @app.route('/background_process')
 def background_process():
