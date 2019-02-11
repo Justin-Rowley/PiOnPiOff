@@ -1,8 +1,8 @@
-$.ajax({
-type: 'POST',
-data: {Power: 1},
-dataType: "text",
-success: function(data){
-            alert("PC Powered On");
-            }
-});
+function poweron() {
+    $('a#process_input').bind('click', function() {
+    $.getJSON('/background_process', {
+    power: "on"
+    });
+    return false;
+    });
+};

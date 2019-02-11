@@ -1,97 +1,41 @@
-<html>
-<head>
-  <link rel="stylesheet" href="static/material.min.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
-  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}"> 
-  <script src="static/Script/material.min.js"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pi On Pi Off</title>
-  
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script type=text/javascript>
-    $(function() {
-      $('a#process_input').bind('click', function() {
-      $.getJSON('/background_process', {
-        power: "off"
-      });
-      return false;
-      });
-    });
-  </script>
-</head>
-
-</head>
-
-<body style="background-color: #f3f3f3">
-
-  <style>
-    i{
-        padding-top:10px;
+{% extends "layout.html" %}
+{% block head %}
+<script src="static/script/poweroff.js"></script>
+{% endblock %}
+{% block content %}
+<!-- Wide card with share menu button -->
+<style>
+    .demo-card-wide.mdl-card {
+      width: 512px;
     }
-  </style>
-  <!-- Always shows a header, even in smaller screens. -->
-  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-    <header class="mdl-layout__header">
-      <div class="mdl-layout__header-row">
-        <!-- Title -->
-        <span class="mdl-layout-title">Pi On Pi Off</span>
-        <!-- Add spacer, to align navigation to the right -->
-        <div class="mdl-layout-spacer"></div>
-        <!-- Navigation. We hide it in small screens. -->
-        <nav class="mdl-navigation mdl-layout--large-screen-only">
-          <a class="mdl-navigation__link" href="/">Main</a>
-          <a class="mdl-navigation__link" href="/Settings">Settings</a>
-        </nav>
+    .demo-card-wide > .mdl-card__title {
+      color: #fff;
+      height: 176px;
+      background: url('static/Logo/LogoOn.png') center / cover;
+    }
+    .demo-card-wide > .mdl-card__menu {
+      color: #fff;
+    }
+    </style>
+    
+    <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+      <div class="mdl-card__title">
+        <h2 class="mdl-card__title-text">Pi On Pi Off</h2>
       </div>
-    </header>
-    <div class="mdl-layout__drawer">
-      <span class="mdl-layout-title">Pi On Pi Off</span>
-      <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" href="/">Main</a>
-        <a class="mdl-navigation__link" href="/Settings">Settings</a>
-      </nav>
+      <div class="mdl-card__supporting-text">
+        <center>
+            Press the button below to switch off your computer
+        </center>
+      </div>
+      <div class="mdl-card__actions mdl-card--border">
+        <center>
+          <a href=# onclick="poweroff()" id=process_input class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" style="width: 465px; height: 40px; min-width: initial;">
+            Power Off!
+          </a>
+      </center>
+      </div>
     </div>
-    <main class="mdl-layout__content">
-      <div class="page-content"><!-- Your content goes here --></div>   
-        <div class="mdl-grid">
-          <div class="content-column mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet mdl-cell--hide-phone"></div>
-          <div class="mdl-cell mdl-cell--6-col mdl-cell--middle mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-            <!-- Wide card with share menu button -->
-            <style>
-                .demo-card-wide.mdl-card {
-                  width: 512px;
-                }
-                .demo-card-wide > .mdl-card__title {
-                  color: #fff;
-                  height: 176px;
-                  background: url('static/Logo/LogoOn.png') center / cover;
-                }
-                .demo-card-wide > .mdl-card__menu {
-                  color: #fff;
-                }
-                </style>
-                
-                <div class="demo-card-wide mdl-card mdl-shadow--2dp">
-                  <div class="mdl-card__title">
-                    <h2 class="mdl-card__title-text">Pi On Pi Off</h2>
-                  </div>
-                  <div class="mdl-card__supporting-text">
-                    <center>
-                        Press the button below to switch off your computer
-                    </center>
-                  </div>
-                  <div class="mdl-card__actions mdl-card--border">
-                    <center>
-                      <a href=# id=process_input class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" style="width: 465px; height: 40px; min-width: initial;">
-                        Power Off!
-                      </a>
-                  </center>
-                  </div>
-                </div>
-          </div>
-          <div class="content-column mdl-cell mdl-cell--3-col mdl-cell--3-col-tablet mdl-cell--hide-phone"></div>
-        </div>
-    </main>
-  </div>
-</body>
-</html>
+{% endblock %}
+
+
+

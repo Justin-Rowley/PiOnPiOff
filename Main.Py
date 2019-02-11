@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def main():
-    PC = ""
+    '''PC = ""
     PC = detect()
     
     if PC == "on":
@@ -13,6 +13,8 @@ def main():
         return render_template("off.html")
     elif PC == "WTF":
         return render_template("main.html")
+        '''
+    return render_template("settings.html")
 
 @app.route('/background_process')
 def background_process():

@@ -1,0 +1,167 @@
+{% extends "layout.html" %}
+{% block head %} {% endblock %}
+
+{% block content %}
+<table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+        <thead>
+          <tr>
+            <th class="mdl-data-table__cell--non-numeric">Day</th>
+            <th>Time to switch on</th>
+            <th>Time to switch off</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="mdl-data-table__cell--non-numeric">Monday</td>
+                <td>
+                    <form action="#">
+                        <div class="mdl-textfield mdl-js-textfield">
+                          <input class="mdl-textfield__input" type="text" pattern="([0-1]{1}[0-9]{1}|20|21|22|23):[0-5]{1}[0-9]{1}" id="MondayOn">
+                          <label class="mdl-textfield__label" for="MondayOn">Time (00:00)</label>
+                          <span class="mdl-textfield__error">Input is not a valid time!</span>
+                        </div>
+                      </form>
+                </td>
+                <td>
+                    <form action="#">
+                        <div class="mdl-textfield mdl-js-textfield">
+                            <input class="mdl-textfield__input" type="text" pattern="([0-1]{1}[0-9]{1}|20|21|22|23):[0-5]{1}[0-9]{1}" id="MondayOff">
+                            <label class="mdl-textfield__label" for="MondayOff">Time (00:00)</label>
+                            <span class="mdl-textfield__error">Input is not a valid time!</span>
+                        </div>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td class="mdl-data-table__cell--non-numeric">Tuesday</td>
+                <td>
+                    <form action="#">
+                        <div class="mdl-textfield mdl-js-textfield">
+                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="TuesdayOn">
+                            <label class="mdl-textfield__label" for="TuesdayOn">Time (00:00)</label>
+                            <span class="mdl-textfield__error">Input is not a number!</span>
+                        </div>
+                        </form>
+                </td>
+                <td>
+                    <form action="#">
+                        <div class="mdl-textfield mdl-js-textfield">
+                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="TuesdayOff">
+                            <label class="mdl-textfield__label" for="TuesdayOff">Time (00:00)</label>
+                            <span class="mdl-textfield__error">Input is not a number!</span>
+                        </div>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td class="mdl-data-table__cell--non-numeric">Wednesday</td>
+                <td>
+                    <form action="#">
+                        <div class="mdl-textfield mdl-js-textfield">
+                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="WednesdayOn">
+                            <label class="mdl-textfield__label" for="WednesdayOn">Time (00:00)</label>
+                            <span class="mdl-textfield__error">Input is not a number!</span>
+                        </div>
+                        </form>
+                </td>
+                <td>
+                    <form action="#">
+                        <div class="mdl-textfield mdl-js-textfield">
+                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="WednesdayOff">
+                            <label class="mdl-textfield__label" for="WednesdayOff">Time (00:00)</label>
+                            <span class="mdl-textfield__error">Input is not a number!</span>
+                        </div>
+                    </form>
+                </td>
+            <tr>
+                <td class="mdl-data-table__cell--non-numeric">Thursday</td>
+                <td>
+                    <form action="#">
+                        <div class="mdl-textfield mdl-js-textfield">
+                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="ThursdayOn">
+                            <label class="mdl-textfield__label" for="ThursdayOn">Time (00:00)</label>
+                            <span class="mdl-textfield__error">Input is not a number!</span>
+                        </div>
+                        </form>
+                </td>
+                <td>
+                    <form action="#">
+                        <div class="mdl-textfield mdl-js-textfield">
+                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="ThursdayOff">
+                            <label class="mdl-textfield__label" for="ThursdayOff">Time (00:00)</label>
+                            <span class="mdl-textfield__error">Input is not a number!</span>
+                        </div>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td class="mdl-data-table__cell--non-numeric">Friday</td>
+                <td>
+                    <form action="#">
+                        <div class="mdl-textfield mdl-js-textfield">
+                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="FridayOn">
+                            <label class="mdl-textfield__label" for="FridayOn">Time (00:00)</label>
+                            <span class="mdl-textfield__error">Input is not a number!</span>
+                        </div>
+                        </form>
+                </td>
+                <td>
+                    <form action="#">
+                        <div class="mdl-textfield mdl-js-textfield">
+                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="FirdayOff">
+                            <label class="mdl-textfield__label" for="FirdayOff">Time (00:00)</label>
+                            <span class="mdl-textfield__error">Input is not a number!</span>
+                        </div>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td class="mdl-data-table__cell--non-numeric">Saturday</td>
+                <td>
+                    <form action="#">
+                        <div class="mdl-textfield mdl-js-textfield">
+                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="SaturdayOn">
+                            <label class="mdl-textfield__label" for="SaturdayOn">Time (00:00)</label>
+                            <span class="mdl-textfield__error">Input is not a number!</span>
+                        </div>
+                    </form>
+                </td>
+                <td>
+                    <form action="#">
+                        <div class="mdl-textfield mdl-js-textfield">
+                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="SaturdayOff">
+                            <label class="mdl-textfield__label" for="SaturdayOff">Time (00:00)</label>
+                            <span class="mdl-textfield__error">Input is not a number!</span>
+                        </div>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td class="mdl-data-table__cell--non-numeric">Sunday</td>
+                <td>
+                    <form action="#">
+                        <div class="mdl-textfield mdl-js-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="SundayOn">
+                            <label class="mdl-textfield__label" for="SundayOn">Time (00:00)</label>
+                            <span class="mdl-textfield__error">Input is not a number!</span>
+                        </div>
+                    </form>
+                </td>
+                <td>
+                    <form action="#">
+                        <div class="mdl-textfield mdl-js-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="SundayOff">
+                            <label class="mdl-textfield__label" for="SundayOff">Time (00:00)</label>
+                            <span class="mdl-textfield__error">Input is not a number!</span>
+                        </div>
+                    </form>
+                </td>
+            </tr>
+        </tbody>
+      </table>
+      <div class="content-column mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet mdl-cell--hide-phone"></div>
+<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
+            Save
+</button>
+
+{% endblock %}

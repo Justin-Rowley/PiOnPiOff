@@ -1,8 +1,6 @@
-$.ajax({
-type: 'POST',
-data: {Power: 0},
-dataType: "text",
-success: function(data){
-            alert("PC Powered Down");
-            }
-});
+function poweroff() {
+    $.getJSON('/background_process', {
+    power: "off"
+    });
+    return false;
+};

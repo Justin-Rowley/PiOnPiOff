@@ -1,0 +1,54 @@
+<html>
+<head>
+  <link rel="stylesheet" href="static/material.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}"> 
+  <script src="static/script/material.min.js"></script>
+  <title>Pi On Pi Off</title>
+  {% block head %}{% endblock %} 
+</head>
+
+<body style="background-color: #f3f3f3">
+
+  <style>
+    i{
+        padding-top:10px;
+    }
+  </style>
+  <!-- Always shows a header, even in smaller screens. -->
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+      <div class="mdl-layout__header-row">
+        <!-- Title -->
+        <span class="mdl-layout-title">Pi On Pi Off</span>
+        <!-- Add spacer, to align navigation to the right -->
+        <div class="mdl-layout-spacer"></div>
+        <!-- Navigation. We hide it in small screens. -->
+        <nav class="mdl-navigation mdl-layout--large-screen-only">
+          <a class="mdl-navigation__link" href="">Main</a>
+          <a class="mdl-navigation__link" href="">Settings</a>
+        </nav>
+      </div>
+    </header>
+    <div class="mdl-layout__drawer">
+      <span class="mdl-layout-title">Pi On Pi Off</span>
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="">Main</a>
+        <a class="mdl-navigation__link" href="">Settings</a>
+      </nav>
+    </div>
+    <main class="mdl-layout__content">
+      <div class="page-content">
+        <div class="mdl-grid">
+            <div class="content-column mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet mdl-cell--hide-phone"></div>
+            <div class="mdl-cell mdl-cell--6-col mdl-cell--middle mdl-cell--6-col-tablet mdl-cell--3-col-phone">  
+            {% block content %}{% endblock %}
+            </div>
+            <div class="content-column mdl-cell mdl-cell--3-col mdl-cell--3-col-tablet mdl-cell--hide-phone"></div>
+        </div>
+      </div>   
+    </main>
+  </div>
+</body>
+
+</html>

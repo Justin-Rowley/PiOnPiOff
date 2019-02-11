@@ -1,4 +1,4 @@
-import RPi.GPIO as GPIO
+#import RPi.GPIO as GPIO
 import time
 
 #change these variables to adjust which GPIO pin will be the SwitchPin for switching the PC on or off
@@ -32,8 +32,9 @@ def off():
     return "off"
 
 def detect():
-    setup()
-    test = GPIO.input(PowerLEDPin)
+    #setup()
+    #test = GPIO.input(PowerLEDPin)
+    test = True
     if test == True:
         PC = "on"
     elif test == False:
