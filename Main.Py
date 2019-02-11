@@ -23,13 +23,13 @@ def background_process():
         Command = on()
         PC = detect()
         if Command == PC:
-            return jsonify(result='Switching On The Computer')
+            return "done!"
         else:
             on()
-            return jsonify(result='Switching On The Computer')
+            return "done!"
     else:
         off()
-        return jsonify(result='Switching Off The Computer')
+        return "done!"
 
 
 
